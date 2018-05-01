@@ -51,8 +51,8 @@ vapp = new Vue({
     showDrink: true,
     showGrenade: true,
     showSmokeBomb: false,
-    showAmmo556: false,
-    showAmmo762: false,
+    showAmmo556: true,
+    showAmmo762: true,
     showForeGrip: false,
     showLowST: false,
     showHighST: true,
@@ -67,11 +67,11 @@ vapp = new Vue({
     showM16A4: false,
     showSCAR: true,
     showAK47: false,
-    showHK416: true,
+    showHK416: false,
     showPan: true,
     showMini14: false,
     showSKS: false,
-    showKar98k: true,
+    showKar98k: false,
 
     // --------------------------------------------------------------------------
 
@@ -129,8 +129,7 @@ vapp = new Vue({
         flags |= 0b00000000000000000000001000000000
       }
        if (this.showForeGrip) {
-
-        flags |= 0b10000000000000000000000000000000
+        flags |= 0b00000000000000000000000000000001
   
       }
       if (this.showLowST) {
